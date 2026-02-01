@@ -20,14 +20,14 @@ while True:
         animales = {"perro": "guau", "gato": "miau", "vaca": "muuu", "oveja": "beee"}
         nombre=input("Introduce un nombre de animal o cree uno nuevo: ")
         
-        if nombre in animales:
-            print(animales.get(nombre))
+        sonido=animales.get(nombre)
+        if sonido is not None:
+            print(sonido)
         
-        elif nombre not in animales:
+        else:
             newanimal=input("introduzca el nuevo animal: ")
-            animales[nombre]=newanimal
             newsound=input ("introduzca el nuevo sonido: ")
-            animales[nombre]=newsound
+            animales[nombre] = newsound
             print("Nuevo animal y sonido añadido ")
       
         
