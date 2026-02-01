@@ -1,3 +1,4 @@
+animales = {"perro": "guau", "gato": "miau", "vaca": "muuu", "oveja": "beee"}
 while True:
     print("1 Variables")
     print("2 Diccionarios")
@@ -9,15 +10,16 @@ while True:
         num1=int(input("Introduzca el primer número:"))
         num2=int(input("Introduzca el segundo número:"))
         
-        print("Hay una diferencia de ",num1-num2 )
-        if num1-num2 <10:
+        diferencia = abs(num1 - num2)
+        print("Hay una diferencia de ", diferencia)
+        if diferencia <10:
             print("Números cercanos")
         else:
-            print("Números cercanos")
+            print("Números lejanos")
         
         
     elif opcion == "2":
-        animales = {"perro": "guau", "gato": "miau", "vaca": "muuu", "oveja": "beee"}
+       
         nombre=input("Introduce un nombre de animal o cree uno nuevo: ")
         
         sonido=animales.get(nombre)
@@ -25,7 +27,6 @@ while True:
             print(sonido)
         
         else:
-            newanimal=input("introduzca el nuevo animal: ")
             newsound=input ("introduzca el nuevo sonido: ")
             animales[nombre] = newsound
             print("Nuevo animal y sonido añadido ")
