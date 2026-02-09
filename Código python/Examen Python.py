@@ -11,12 +11,16 @@ while True:
         num2=int(input("Introduzca el segundo número:"))
         
         diferencia = abs(num1 - num2)
-        print("Hay una diferencia de ", diferencia)
         if diferencia <10:
+            print("Hay una diferencia de ", diferencia)
             print("Números cercanos")
         else:
+            print("Hay una diferencia de ", diferencia)
             print("Números lejanos")
-        
+        if diferencia <= 0:
+            newdiferencia = diferencia - diferencia
+            dif = newdiferencia + diferencia
+            print("Hay una diferencia de ", diferencia)
         
     elif opcion == "2":
        
